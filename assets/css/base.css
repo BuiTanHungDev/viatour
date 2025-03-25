@@ -1,0 +1,37 @@
+:root {
+  --primary--color: #eb662b;
+  --text-primary-color: #05073C;
+  --black-color: #000;
+  --white-color: #fff;
+}
+* {
+  box-sizing: inherit;
+}
+html {
+    /* 62,5 tương đương 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'inter', sans-serif;
+
+}
+ul{
+   
+}
+li{
+     list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.grid{
+    width: 1320px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-width{
+    width: 100%;
+}
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+}
