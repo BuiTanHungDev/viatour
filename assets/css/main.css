@@ -11,13 +11,16 @@ body.no-scroll {
   bottom: 0;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header__navbar {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 160px;
-  padding: 22px 0;
+  /* padding: 16px 0; */
   box-sizing: border-box;
 }
 
@@ -145,7 +148,7 @@ body.no-scroll {
 .tour-search {
   border-radius: 12px;
   height: 705px;
-  margin-top: calc(88px + 22px);
+  margin-top: 88px;
   background-image: url("../img/Section.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -964,6 +967,7 @@ body.no-scroll {
     top: 0;
     margin: 0 auto;
     padding: 0 16px;
+    
   }
   .grid {
     max-width: 390px;
@@ -973,7 +977,7 @@ body.no-scroll {
   .header__navbar {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 30px;
   }
   .header__navbar--search {
     width: 140px;
