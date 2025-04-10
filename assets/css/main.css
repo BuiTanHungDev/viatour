@@ -666,7 +666,7 @@ body.no-scroll {
   margin: 0 auto;
   border: none;
   border-radius: 12px;
-  background-image: url(/assets/img/banner-discount.png);
+  background-image: url("/assets/img/banner-discount.png");
   box-sizing: border-box;
   background-repeat: no-repeat;
 }
