@@ -5,10 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIATOUR</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,35 +26,59 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    
+
 </head>
 
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
+            <div class="">
+                <input type="checkbox" class="nav__input" name="" id="nav-mobile-input">
+                <label for="nav-mobile-input" class="nav_overlay"></label>
                 <nav class="header__navbar">
                     <div class="header__navbar--logo">
-                        <img src="./assets/img/logo.png" alt="logo">
+                        <a href="http://127.0.0.1:5500/index.html"><img src="./assets/img/logo.png" alt="logo"></a>
                     </div>
                     <div class="header__navbar--search">
-                        <input type="search" class="header__navbar--input"  name="" id="" placeholder="Search destinations or activities">
+                        <input type="search" class="header__navbar--input" name="" id=""
+                            placeholder="Search destinations or activities">
                         <!-- <button type="submit" class="header__navbar--submit" ><i class="fa-solid fa-magnifying-glass"></i></button> -->
                     </div>
-                    <ul class="header__navbar--list" class="header__navbar--list">
+                    <ul class="header__navbar--list d-none d-md-flex">
+                        <li class="header__navbar--item active">
+                            <a href="http://127.0.0.1:5500/index.html" class="header__navbar--item--link "
+                                data-target="#home">
+                                Home
+                            </a>
+                        </li>
+                        <li class="header__navbar--item ">
+                            <a href="" class="header__navbar--item--link" data-target="#destination">
+                                Tour
+                            </a>
+                        </li>
                         <li class="header__navbar--item ">
                             <a href="" class="header__navbar--item--link" data-target="#destination">
                                 Destination
                             </a>
                         </li>
-                        <li class="header__navbar--item active">
+                        <li class="header__navbar--item ">
+                            <a href="" class="header__navbar--item--link" data-target="#service">
+                                Service
+                            </a>
+                        </li>
+                        <!-- <li class="header__navbar--item ">
                             <a href="" class="header__navbar--item--link" data-target="#activities">
                                 Activities
+                            </a>
+                        </li> -->
+                        <li class="header__navbar--item">
+                            <a href="" class="header__navbar--item--link">
+                                About
                             </a>
                         </li>
                         <li class="header__navbar--item">
                             <a href="" class="header__navbar--item--link">
-                                USD
+                                Blog
                             </a>
                         </li>
                         <li class="header__navbar--item">
@@ -58,10 +92,71 @@
                             </a>
                         </li>
                     </ul>
+                    <label for="nav-mobile-input" class="header__navbar-bars d-md-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                    <label for="nav-mobile-input" class="header__navbar-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
                 </nav>
+                <!-- nav mobile -->
+                <nav class="header__mobile d-block d-md-none">
+                    <ul class="header__mobile--list">
+                        <li class="header__mobile--item active">
+                            <i class="fa-solid fa-house"></i>
+                            <a href="http://127.0.0.1:5500/index.html" class="header__mobile--item--link "
+                                data-target="#home">
+                                Home
+                            </a>
+                        </li>
+                        <li class="header__mobile--item">
+                            <i class="fa-solid fa-plane"></i>
+                            <a href="" class="header__mobile--item--link" data-target="#tour">
+                                Tour
+                            </a>
+                        </li>
+                        <li class="header__mobile--item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <a href="" class="header__mobile--item--link" data-target="#destination">
+                                Destination
+                            </a>
+                        </li>
+                        <li class="header__mobile--item">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <a href="" class="header__mobile--item--link" data-target="#service">
+                                Service
+                            </a>
+                        </li>
+                        <li class="header__mobile--item">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <a href="" class="header__mobile--item--link">
+                                About
+                            </a>
+                        </li>
+                        <li class="header__mobile--item">
+                            <i class="fa-solid fa-blog"></i>
+                            <a href="" class="header__mobile--item--link">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="header__mobile--item">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <a href="" class="header__mobile--item--link">
+                                Sign up
+                            </a>
+                        </li>
+                        <li class="header__mobile--item">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <a href="" class="header__mobile--item--link header__mobile--item--login">
+                                Log in
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
             </div>
         </header>
-        <div class="container">
+        <div class="app__container">
             <section class="tour-search">
                 <div class="grid__full-width">
                     <div class="tour-search__content">
@@ -98,7 +193,7 @@
                 <div class="grid">
                     <h2 class="why-choose__title">Why choose Tourz</h2>
                     <div class="why-choose__list">
-                        <div class="why-choose__item">
+                        <div class="why-choose__item" data-aos="zoom-in">
                             <img src="./assets/img/ticket.svg fill.png" alt="Flexibility" class="why-choose__icon">
                             <h3 class="why-choose__heading">Ultimate flexibility</h3>
                             <p class="why-choose__description">
@@ -106,7 +201,7 @@
                                 budget.
                             </p>
                         </div>
-                        <div class="why-choose__item">
+                        <div class="why-choose__item" data-aos="zoom-in">
                             <img src="./assets/img/hot-air-balloon.svg fill.png" alt="Memorable experiences"
                                 class="why-choose__icon">
                             <h3 class="why-choose__heading">Memorable experiences</h3>
@@ -114,7 +209,7 @@
                                 Browse and book tours and activities so incredible, you’ll want to tell your friends.
                             </p>
                         </div>
-                        <div class="why-choose__item">
+                        <div class="why-choose__item" data-aos="zoom-in">
                             <img src="./assets/img/diamond.svg fill.png" alt="Quality at our core"
                                 class="why-choose__icon">
                             <h3 class="why-choose__heading">Quality at our core</h3>
@@ -122,7 +217,7 @@
                                 High-quality standards. Millions of reviews. A Tourz company.
                             </p>
                         </div>
-                        <div class="why-choose__item">
+                        <div class="why-choose__item" data-aos="zoom-in">
                             <img src="assets/img/medal.svg fill.png" alt="Award-winning support"
                                 class="why-choose__icon">
                             <h3 class="why-choose__heading">Award-winning support</h3>
@@ -140,7 +235,7 @@
                         <h2 class="trending-destinations__title">Trending destinations</h2>
                         <a href="#" class="trending-destinations__see-all">See all</a>
                     </div>
-                    <div class="trending-destinations__list destination-trending-slider">
+                    <div class="trending-destinations__list destination-trending-slider ">
                         <div class="trending-destinations__item">
                             <img src="./assets/img/pari.png" alt="Paris" class="trending-destinations__image">
                             <h3 class="trending-destinations__name">Paris</h3>
@@ -224,7 +319,7 @@
                             <p class="trending-destinations__tours">900+ Tours</p>
                         </div>
                     </div>
-                    
+
                 </div>
 
             </section>
@@ -236,7 +331,7 @@
                         <a href="#" class="popular-tours__see-all">See all</a>
                     </div>
                     <div class="popular-tours__list">
-                        <div class="tour-card">
+                        <div class="tour-card" data-aos="zoom-in-up">
                             <div class="tour-card__image">
                                 <button class="tour-card__button"></button>
                                 <img src="./assets/img/popular-1.png" alt="Centipede Tour by ATV">
@@ -252,7 +347,7 @@
                             </div>
                         </div>
 
-                        <div class="tour-card">
+                        <div class="tour-card" data-aos="zoom-in-up">
                             <div class="tour-card__image">
                                 <button class="tour-card__button"></button>
                                 <img src="./assets/img/popular-2.png" alt="Molokini and Turtle Town Snorkeling">
@@ -268,7 +363,7 @@
                             </div>
                         </div>
 
-                        <div class="tour-card">
+                        <div class="tour-card" data-aos="zoom-in-up">
                             <div class="tour-card__image">
                                 <button class="tour-card__button"></button>
                                 <img src="./assets/img/popular-3.png" alt="Westminster Walking Tour">
@@ -278,13 +373,13 @@
                                 <h3 class="tour-card__title">Westminster Walking Tour & Westminster Abbey Entry</h3>
                                 <p class="tour-card__rating">⭐ 4.8 (243)</p>
                                 <div class="tour-card__info-day">
-                                    <p class="tour-card__price">From <strong>$943</strong></p>
                                     <p class="tour-card__days">4 days</p>
+                                    <p class="tour-card__price">From <strong>$943</strong></p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tour-card">
+                        <div class="tour-card" data-aos="zoom-in-up">
                             <div class="tour-card__image">
                                 <button class="tour-card__button"></button>
                                 <img src="./assets/img/popular-4.png" alt="Circle Island Day Tour">
@@ -301,7 +396,7 @@
                             </div>
                         </div>
 
-                        <div class="tour-card">
+                        <div class="tour-card" data-aos="zoom-in-up">
                             <div class="tour-card__image">
                                 <button class="tour-card__button"></button>
                                 <img src="./assets/img/popular-5.png" alt="Space Center Admission Ticket">
@@ -317,7 +412,7 @@
                             </div>
                         </div>
 
-                        <div class="tour-card">
+                        <div class="tour-card" data-aos="zoom-in-up">
                             <div class="tour-card__image">
                                 <button class="tour-card__button"></button>
                                 <img src="./assets/img/popular-6.png" alt="Clear Kayak Tour">
@@ -334,7 +429,7 @@
                             </div>
                         </div>
 
-                        <div class="tour-card">
+                        <div class="tour-card" data-aos="zoom-in-up">
                             <div class="tour-card__image">
                                 <button class="tour-card__button"></button>
                                 <img src="./assets/img/popular-7.png" alt="Salem Guided Walking Tour">
@@ -350,7 +445,7 @@
                             </div>
                         </div>
 
-                        <div class="tour-card">
+                        <div class="tour-card" data-aos="zoom-in-up">
                             <div class="tour-card__image">
                                 <button class="tour-card__button"></button>
                                 <img src="./assets/img/popular-8.png" alt="Mauna Kea Summit Sunset">
@@ -389,7 +484,7 @@
                                 Book Now
                             </button>
                         </div>
-                        <img src="./assets/img/shape.svg fill.png" alt="">
+                        <img class="d-none d-md-block" src="./assets/img/shape.svg fill.png" alt="">
                     </div>
 
                 </div>
@@ -404,31 +499,31 @@
                     <div class="popular-activities__grid">
                         <div class="poular-activities__left">
                             <div class="activity-card__left">
-                                <div class="activity-card">
+                                <div class="activity-card" data-aos="flip-up">
                                     <img src="./assets/img/cruises-tour.png" alt="Cruises">
                                     <p class="activity-card__title">Cruises</p>
                                 </div>
-                                <div class="activity-card">
+                                <div class="activity-card" data-aos="flip-up">
                                     <img src="./assets/img/museum-tour.png" alt="Museum Tour">
                                     <p class="activity-card__title">Museum Tour</p>
                                 </div>
                             </div>
-                            <div class="activity-card">
+                            <div class="activity-card" data-aos="flip-up">
                                 <img src="./assets/img/beach-tour.png" alt="Beach Tours">
                                 <p class="activity-card__title">Beach Tours</p>
                             </div>
                         </div>
                         <div class="poular-activities__right">
-                            <div class="activity-card">
+                            <div class="activity-card" data-aos="flip-up">
                                 <img src="./assets/img/city-tour.png" alt="City Tours">
                                 <p class="activity-card__title">City Tours</p>
                             </div>
                             <div class="activity-card__right">
-                                <div class="activity-card">
+                                <div class="activity-card" data-aos="flip-up">
                                     <img src="./assets/img/food-tour.png" alt="Food">
                                     <p class="activity-card__title">Food</p>
                                 </div>
-                                <div class="activity-card">
+                                <div class="activity-card" data-aos="flip-up">
                                     <img src="./assets/img/hiking-tour.png" alt="Hiking">
                                     <p class="activity-card__title">Hiking</p>
                                 </div>
@@ -442,11 +537,11 @@
                 <div class="tour-trending__container">
                     <div class="grid">
                         <div class="tour-trending__header">
-                            <h2 class="tour-trending__title">Popular things to do</h2>
+                            <h2 class="tour-trending__title">Top Trending</h2>
                             <a href="#" class="tour-trending__see-all">See all</a>
                         </div>
                         <div class="tour-trending__slider">
-                            <div class="tour-trending__slider-card">
+                            <div class="tour-trending__slider-card" data-aos="zoom-in-up">
                                 <div class="tour-trending__image">
                                     <button class="tour-trending__button"></button>
                                     <img src="./assets/img/popular-1.png" alt="Centipede Tour by ATV">
@@ -463,49 +558,49 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tour-trending__slider-card">
+                            <div class="tour-trending__slider-card" data-aos="zoom-in-up">
                                 <div class="tour-trending__image">
                                     <button class="tour-trending__button"></button>
-                                    <img src="./assets/img/popular-1.png" alt="Centipede Tour by ATV">
+                                    <img src="./assets/img/popular-2.png" alt="Centipede Tour by ATV">
                                 </div>
                                 <div class="tour-trending__info">
-                                    <p class="tour-trending__location">Paris, France</p>
-                                    <h3 class="tour-trending__card-title">Centipede Tour - Guided Arizona Desert Tour by
-                                        ATV
+                                    <p class="tour-trending__location">New York, USA</p>
+                                    <h3 class="tour-trending__card-title">Molokini and Turtle Town
+                                        Snorkeling Adventure Aboard
                                     </h3>
                                     <p class="tour-trending__rating">⭐ 4.8 (243)</p>
                                     <div class="tour-trending__info-day">
                                         <p class="tour-trending__days">4 days</p>
-                                        <p class="tour-trending__price">From <strong>$189.25</strong></p>
+                                        <p class="tour-trending__price">From <strong>$225</strong></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tour-trending__slider-card">
+                            <div class="tour-trending__slider-card" data-aos="zoom-in-up">
                                 <div class="tour-trending__image">
                                     <button class="tour-trending__button"></button>
-                                    <img src="./assets/img/popular-1.png" alt="Centipede Tour by ATV">
+                                    <img src="./assets/img/popular-3.png" alt="Centipede Tour by ATV">
                                 </div>
                                 <div class="tour-trending__info">
-                                    <p class="tour-trending__location">Paris, France</p>
-                                    <h3 class="tour-trending__card-title">Centipede Tour - Guided Arizona Desert Tour by
-                                        ATV
+                                    <p class="tour-trending__location">London, UK</p>
+                                    <h3 class="tour-trending__card-title">Westminster Walking Tour &
+                                        Westminster Abbey Entry
                                     </h3>
                                     <p class="tour-trending__rating">⭐ 4.8 (243)</p>
                                     <div class="tour-trending__info-day">
                                         <p class="tour-trending__days">4 days</p>
-                                        <p class="tour-trending__price">From <strong>$189.25</strong></p>
+                                        <p class="tour-trending__price">From <strong>$943</strong></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tour-trending__slider-card">
+                            <div class="tour-trending__slider-card" data-aos="zoom-in-up">
                                 <div class="tour-trending__image">
                                     <button class="tour-trending__button"></button>
-                                    <img src="./assets/img/popular-1.png" alt="Centipede Tour by ATV">
+                                    <img src="./assets/img/popular-4.png" alt="Centipede Tour by ATV">
                                 </div>
                                 <div class="tour-trending__info">
-                                    <p class="tour-trending__location">Paris, France</p>
-                                    <h3 class="tour-trending__card-title">Centipede Tour - Guided Arizona Desert Tour by
-                                        ATV
+                                    <p class="tour-trending__location">New York, USA</p>
+                                    <h3 class="tour-trending__card-title">All Inclusive Ultimate Circle Island
+                                        Day Tour with Lunch
                                     </h3>
                                     <p class="tour-trending__rating">⭐ 4.8 (243)</p>
                                     <div class="tour-trending__info-day">
@@ -766,7 +861,7 @@
                         <a href="#" class="tour-trending__see-all">See all</a>
                     </div>
                     <div class="travel-articles__slider">
-                        <div class="travel-articles__card">
+                        <div class="travel-articles__card" data-aos="zoom-in">
                             <div class="travel-articles__image">
                                 <p class="travel-articles__image-lable">Trips</p>
                                 <img src="./assets/img/travel-articles-1.png" alt=""
@@ -778,7 +873,7 @@
                                     <p class="travel-articles__author-name">By Ali Tufan</p>
 
                                 </div>
-                                <p class="travel-articles__title">
+                                <p class="travel-articles__info-title">
                                     Kenya vs Tanzania Safari: The Better African
                                     Safari Experience
                                 </p>
@@ -786,7 +881,7 @@
 
 
                         </div>
-                        <div class="travel-articles__card">
+                        <div class="travel-articles__card" data-aos="zoom-in">
                             <div class="travel-articles__image">
                                 <p class="travel-articles__image-lable">Trips</p>
                                 <img src="./assets/img/travel-articles-2.png" alt=""
@@ -797,14 +892,14 @@
                                     <p class="travel-articles__author-day">April 07 2023</p>
                                     <p class="travel-articles__author-name">By Emily Johnson</p>
                                 </div>
-                                <p class="travel-articles__title">
+                                <p class="travel-articles__info-title">
                                     Kenya vs Tanzania Safari: The Better African
                                     Safari Experience
                                 </p>
                             </div>
 
                         </div>
-                        <div class="travel-articles__card">
+                        <div class="travel-articles__card" data-aos="zoom-in">
                             <div class="travel-articles__image">
                                 <p class="travel-articles__image-lable">Trips</p>
                                 <img src="./assets/img/travel-articles-3.png" alt=""
@@ -816,7 +911,25 @@
                                     <p class="travel-articles__author-name">By Maxwell Rhodes</p>
 
                                 </div>
-                                <p class="travel-articles__title">
+                                <p class="travel-articles__info-title">
+                                    Kenya vs Tanzania Safari: The Better African
+                                    Safari Experience
+                                </p>
+                            </div>
+                        </div>
+                        <div class="travel-articles__card" data-aos="zoom-in">
+                            <div class="travel-articles__image">
+                                <p class="travel-articles__image-lable">Trips</p>
+                                <img src="./assets/img/travel-articles-3.png" alt=""
+                                    class="travel-articles__image-image">
+                            </div>
+                            <div class="travel-articles__info">
+                                <div class="travel-articles__author">
+                                    <p class="travel-articles__author-day">April 08 2023</p>
+                                    <p class="travel-articles__author-name">By Maxwell Rhodes</p>
+
+                                </div>
+                                <p class="travel-articles__info-title">
                                     Kenya vs Tanzania Safari: The Better African
                                     Safari Experience
                                 </p>
@@ -839,12 +952,12 @@
                             </p>
                         </div>
                         <div class="footer__section">
-                            <div class="footer__section-contact">
+                            <div class="footer__section-contact footer__section-card">
                                 <h3 class="footer__section-title">Contact</h3>
                                 <p>328 Queensberry Street, North Melbourne VIC3051, Australia.</p>
                                 <a href="#">hi@svtours.com</a>
                             </div>
-                            <div class="footer__section-company">
+                            <div class="footer__section-company footer__section-card">
                                 <h3 class="footer__section-title">Company</h3>
                                 <ul class="footer__list">
                                     <li class="footer__item"><a class="footer__item-link" href="#">About Us</a></li>
@@ -860,7 +973,7 @@
                                 </ul>
                             </div>
 
-                            <div class="footer__section-support">
+                            <div class="footer__section-support footer__section-card">
                                 <h3 class="footer__section-title">Support</h3>
                                 <ul class="footer__list">
                                     <li class="footer__item"><a class="footer__item-link" href="#">Get In Touch</a></li>
@@ -870,7 +983,7 @@
                                 </ul>
                             </div>
 
-                            <div class="footer__section-newsletter">
+                            <div class="footer__section-newsletter footer__section-card">
                                 <h3 class="footer__section-title">Newsletter</h3>
                                 <p>Subscribe to the free newsletter and stay up to date</p>
                                 <form action="#" class="footer__section-newsletter-form" method="POST">
@@ -898,11 +1011,16 @@
                     <div class="footer__bottom-content">
                         <p class="footer__content-copyright">© Copyright Viatours 2024</p>
                         <div class="footer__content-payment">
-                            <img class="footer__content-payment-image" src="./assets/img/payment-visa.png" alt="payment-visa">
-                            <img class="footer__content-payment-image" src="./assets/img/payment-master-card.png" alt="payment-master-card">
-                            <img class="footer__content-payment-image" src="./assets/img/payment-apple.png" alt="payment-apple">
-                            <img class="footer__content-payment-image" src="./assets/img/paymentdisc.png" alt="payment-disc">
-                            <img class="footer__content-payment-image" src="./assets/img/payment-apple.png" alt="payment-apple">
+                            <img class="footer__content-payment-image" src="./assets/img/payment-visa.png"
+                                alt="payment-visa">
+                            <img class="footer__content-payment-image" src="./assets/img/payment-master-card.png"
+                                alt="payment-master-card">
+                            <img class="footer__content-payment-image" src="./assets/img/payment-apple.png"
+                                alt="payment-apple">
+                            <img class="footer__content-payment-image" src="./assets/img/paymentdisc.png"
+                                alt="payment-disc">
+                            <img class="footer__content-payment-image" src="./assets/img/payment-apple.png"
+                                alt="payment-apple">
                             <img class="footer__content-payment-image" src="./assets/img/payment-amex.png" alt="">
                         </div>
                     </div>
@@ -911,9 +1029,22 @@
         </footer>
     </div>
     <script type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
     <script src="./assets/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
